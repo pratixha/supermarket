@@ -197,9 +197,12 @@ GEM
       activerecord (>= 5.a)
       database_cleaner-core (~> 2.0.0)
     database_cleaner-core (2.0.1)
-    ddtrace (0.53.0)
-      ffi (~> 1.0)
+    ddtrace (1.5.1)
+      debase-ruby_core_source (>= 0.10.16, <= 0.10.17)
+      libdatadog (~> 0.7.0.1.1)
+      libddwaf (~> 1.5.1.0.0)
       msgpack
+    debase-ruby_core_source (0.10.17)
     diff-lcs (1.5.0)
     docile (1.4.0)
     domain_name (0.5.20190701)
@@ -367,6 +370,9 @@ GEM
       letter_opener (~> 1.7)
       railties (>= 5.2)
       rexml
+    libdatadog (0.7.0.1.1)
+    libddwaf (1.5.1.0.0)
+      ffi (~> 1.0)
     libhoney (2.1.0)
       addressable (~> 2.0)
       excon
@@ -422,7 +428,7 @@ GEM
     mixlib-log (3.0.9)
     mixlib-shellout (3.2.5)
       chef-utils
-    msgpack (1.4.2)
+    msgpack (1.6.0)
     multi_json (1.15.0)
     multi_xml (0.6.0)
     multipart-post (2.1.1)
@@ -803,7 +809,7 @@ DEPENDENCIES
   compass-rails
   cookstyle (~> 7.32.1)
   database_cleaner
-  ddtrace (= 0.53.0)
+  ddtrace (= 1.5.1)
   dotenv
   dry-struct (~> 1.4)
   factory_bot_rails
